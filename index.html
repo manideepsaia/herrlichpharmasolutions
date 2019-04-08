@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to Herrlich Pharma Solutions</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+	<!-- responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- master stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- responsive stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+  
+     
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--News scrolling-->
+<script type="text/javascript" src="http://ajax.googlesynthesiss.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/simpleTicker.css">
+<script type="text/javascript">
+	  $(function() {
+	  
+		//cache the ticker
+		var ticker = $("#ticker");
+		  
+		//wrap dt:dd pairs in divs
+		ticker.children().filter("dt").each(function() {
+		  
+		  var dt = $(this),
+		    container = $("<div>");
+		  
+		  dt.next().appendTo(container);
+		  dt.prependTo(container);
+		  
+		  container.appendTo(ticker);
+		});
+				
+		//hide the scrollbar
+		ticker.css("overflow", "hidden");
+		
+		//animator function
+		function animator(currentItem) {
+		    
+		  //work out new anim duration
+		  var distance = currentItem.height();
+			duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.015;
+
+		  //animate the first child of the ticker
+		  currentItem.animate({ marginTop: -distance }, duration, "linear", function() {
+		    
+			//move current item to the bottom
+			currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
+
+			//recurse
+			animator(currentItem.parent().children(":first"));
+		  }); 
+		};
+		
+		//start the ticker
+		animator(ticker.children(":first"));
+				
+		//set mouseenter
+		ticker.mouseenter(function() {
+		  
+		  //stop current animation
+		  ticker.children().stop();
+		  
+		});
+		
+		//set mouseleave
+		ticker.mouseleave(function() {
+		          
+          //resume animation
+		  animator(ticker.children(":first"));
+		  
+		});
+	  });
+    </script>
+
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="logo pull-left">
+				<a href="index.html">
+					<img src="img/logo.png" alt="Herrlich Pharma Solutions"/>
+				</a>
+			</div>
+			<div class="header-right-info pull-right clearfix">
+				<!--<div class="single-header-info">
+					<div class="icon-box">
+						<div class="inner-box">
+							<i class="flaticon-interface-2"></i>
+						</div>
+					</div>
+					<div class="content">
+						<h3>EMAIL</h3>
+						
+					</div>
+				</div>-->
+				<div class="single-header-info">
+					<div class="icon-box">
+						<div class="inner-box">
+							<i class="fa fa-envelope"></i>
+						</div>
+					</div>
+					<div class="content">
+						<!--<h3>Call Now</h3>-->
+						 
+                         <b>info@herrlichpharma.com</b>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</header> <!-- /.header -->
+
+
+	<nav class="mainmenu-area stricky">
+		<div class="container">
+			<div class="navigation pull-left">
+				<div class="nav-header">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="dropdown"><a href="about-us.html">About Us</a>
+                        <ul class="submenu">
+                                 <li><a href="about-us.html">Company Overview </a></li>
+								<li><a href="vision-mission.html">Vision & Mission</a></li>                                
+								<li><a href="group-of-companies.html">Our Group of Companies</a></li>
+								
+							</ul>
+                        </li>						
+							<li class="dropdown">
+							<a href="#">Products</a>
+							<ul class="submenu">
+								<li><a href="synthesiss.html">synthesis INTERMEDIATES</a></li>
+								<li><a href="customsynthisis.html">CUSTOM SYNTHESIS</a></li>
+								<li><a href="natural.html">NATURAL PRODUCTS</a>
+								<ul class="dropdown">
+								<li><a href="weight.html">Weight Management</a></li>
+								<li><a href="antioxidants.html">Antioxidants</a></li>
+								<li><a href="eyehealth.html">Eye Health</a></li>
+								<li><a href="herbalextracts.html">Standardized Herbal Extracts</a></li>
+								<li><a href="bonehealth.html">Bone Health</a></li>
+								<li><a href="cosmeticingredients.html">Cosmetic Ingredients</a></li>
+								<li><a href="diabeticcare.html">Diabetic Care</a></li>
+								<li><a href="naturalcolours.html">Natural Colours</a></li>
+							   </ul>
+							    </li>
+							  	<li><a href="synthesisimpurities.html">synthesis IMPURITIES</a></li>
+							</ul>
+						</li>			
+						<li>
+							<a href="services.html">Services</a>
+							<!--<ul class="submenu">
+								<li><a href="cgmp-manufacturing-services.php">cGMP Manufacturing Services</a></li>
+								<li><a href="custom-synthesis-services.php">Custom Synthesis Services</a></li>
+                                <li><a href="process-r&d-services.php">Process R&D Services</a></li>
+								
+							</ul>-->
+						</li>
+						<li><a href="manufacturing-facilities.html">Manufacturing Facilities</a></li>
+                        <li><a href="enquiry.php">Enquiry Form</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+						
+					</ul>
+				</div>
+				<div class="nav-footer">
+					<button><i class="fa fa-bars"></i></button>
+				</div>
+			</div>
+			
+		</div>
+	</nav> <!-- /.mainmenu-area -->    
+	
+	<section class="rev_slider_wrapper">
+		<div id="slider1" class="rev_slider"  data-version="5.0">
+			<ul>
+				
+				<li data-transition="parallaxvertical">
+					<img src="img/slides/download (1).jpg"  alt="" width="1920" height="500" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
+					<div class="tp-caption sfl tp-resizeme thm-banner-h1 heavy" 
+				        data-x="right" data-hoffset="20" 
+				        data-y="top" data-voffset="80" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="500">
+						<span style="color:#4eac4e;">HERRLICH</span> <span style="color:#0f7caf;">Pharma Solutions</span>
+				    </div>
+					<div class="tp-caption sfr tp-resizeme thm-banner-h1 " 
+				        data-x="right" data-hoffset="20" 
+				        data-y="top" data-voffset="130" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="1000">
+				    </div>
+					
+					<!--<div class="tp-caption sfl tp-resizeme" 
+				        data-x="left" data-hoffset="0" 
+				        data-y="top" data-voffset="200" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="2300">
+						<a href="#" class="thm-btn">Donate Now</a>
+				    </div>
+					<div class="tp-caption sfr tp-resizeme" 
+				        data-x="left" data-hoffset="185" 
+				        data-y="top" data-voffset="200" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="2600">
+						<a href="#" class="thm-btn inverse">Learn More</a>
+				    </div>-->
+				</li>
+				<li data-transition="parallaxvertical">
+					<img src="img/slides/images.jpg"  alt="" width="1920" height="500" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
+					<div class="tp-caption sfl tp-resizeme thm-banner-h1 heavy" 
+				        data-x="right" data-hoffset="20" 
+				        data-y="top" data-voffset="80" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="500">
+						<span style="color:#4eac4e;">HERRLICH</span> <span style="color:#0f7caf;">Pharma Solutions</span>
+				    </div>
+					<div class="tp-caption sfr tp-resizeme thm-banner-h1 " 
+				        data-x="right" data-hoffset="20" 
+				        data-y="top" data-voffset="130" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="1000">
+				    </div>
+					
+					<!--<div class="tp-caption sfl tp-resizeme" 
+				        data-x="left" data-hoffset="0" 
+				        data-y="top" data-voffset="200" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="2300">
+						<a href="#" class="thm-btn">Donate Now</a>
+				    </div>
+					<div class="tp-caption sfr tp-resizeme" 
+				        data-x="left" data-hoffset="185" 
+				        data-y="top" data-voffset="200" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="2600">
+						<a href="#" class="thm-btn inverse">Learn More</a>
+				    </div>-->
+				</li>
+				<li data-transition="parallaxvertical">
+					<img src="img/slides/3.jpg"  alt=""  width="1920" height="500" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" >
+					<div class="tp-caption sfl tp-resizeme thm-banner-h1 blue-bg" 
+				        data-x="left" data-hoffset="20" 
+				        data-y="top" data-voffset="80" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="500">
+						Chemicals Research for
+				    </div>
+					<div class="tp-caption sfr tp-resizeme thm-banner-h1 heavy black-bg" 
+				        data-x="left" data-hoffset="20" 
+				        data-y="top" data-voffset="150" 
+				        data-whitespace="nowrap"
+				        data-transform_idle="o:1;" 
+				        data-transform_in="o:0" 
+				        data-transform_out="o:0" 
+				        data-start="1000">
+						future generations
+				    </div>
+					
+				</li>
+			</ul>
+		</div>
+	</section>
+	
+	
+	
+	
+	
+<section class="event-feature sec-padding" data-bg-color="#fafafa">
+		<div class="container">
+			<h4 class="sec-color  double-line line-center  text-center">NewProducts</h4>
+  <div class="col-md-3">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/synthesis/1.png" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/synthesis/2.png" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/synthesis/3.png" alt="New york" style="width:100%;">
+      </div>
+	  <div class="item">
+        <img src="img/synthesis/4.png" alt="New york" style="width:100%;">
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="col-md-3">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/synthesis/2.png" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/synthesis/3.png" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/synthesis/4.png" alt="New york" style="width:100%;">
+      </div>
+	  
+	  <div class="item">
+        <img src="img/synthesis/1.png" alt="New york" style="width:100%;">
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="col-md-3">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/synthesis/3.png" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/synthesis/4.png" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/synthesis/1.png" alt="New york" style="width:100%;">
+      </div>
+	  
+	  <div class="item">
+        <img src="img/synthesis/2.png" alt="New york" style="width:100%;">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/synthesis/4.png" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/synthesis/1.png" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/synthesis/2.png" alt="New york" style="width:100%;">
+      </div>
+	  
+	  <div class="item">
+        <img src="img/synthesis/3.png" alt="New york" style="width:100%;">
+      </div>
+    </div>
+  </div>
+</div>
+		</div>
+	</section>
+	
+
+	<section class="event-feature sec-padding" data-bg-color="#fafafa">
+		<div class="container">
+			<div class="row">
+	          <div class="col-sm-12 col-md-12 col-lg-4 md-col6-center">
+	            <h4 class="sec-color  double-line line-left">Services</h4>
+                 <img class="full-width" src="img/quality.jpg" alt="">
+	            <p class="mt_15 mb_60">We understand the global requirements and our experience and capabilities enable us to support the global pharmaceutical companies. We provide chemistry and process development services to Global Pharmaceutical, Bio-tech and Agrochemical Research Organizations With our cost effective and efficient services.</p>
+                <a class="thm-btn btn-xs mt_10" href="services.php">Read More</a>
+	          </div>
+	          <div class="col-sm-12 col-md-12 col-lg-4 md-col6-center mt-md-50">
+	            <h4 class="sec-color  double-line line-left">About Herrlich Pharma Solutions</h4>
+	            <div class="featured-causes">
+	              <div class="row">
+	                <div class="col-sm-12">
+	                  <div class="thumb">
+	                    <img class="full-width" src="img/r-d.jpg" alt="">
+	                    
+	                  </div>
+	                </div>
+	                <div class="col-sm-12 mt_15">
+	                  <div class="causes-details">
+	                   
+	                    <p>The company Herrlich Pharma Solutions, is established in the year 2013 by Mr. Praveen, founder and CEO, with a strong research and manufacturing team. Our scientists have expertise in developing difficult to make technology intensive products, Active Pharmaceutical Ingredients (synthesiss).</p>
+	                    <a class="thm-btn btn-xs" href="about-us.php">Read More</a>
+	                   
+	                   
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+              
+              
+              <div class="col-sm-12 col-md-12 col-lg-4 md-col6-center mt-md-50">
+               <h4 class="sec-color  double-line line-left">Our Participation..</h4>
+              
+              <div class="causes sm-col5-center">
+	            
+	              <div class="causes-details clearfix">
+	               
+	                <dl id="ticker">
+                     <dt class="heading">&nbsp;</dt>
+                    <dt class="heading">
+                    <div class="event style-two">
+	                <div class="row">
+	                  <div class="col-xs-3">
+	                    <div class="event-thumb">
+	                      <ul class="event-date">
+	                        <li class="date">28</li>
+	                        <li class="month">Nov</li>
+	                      </ul>
+	                    </div>
+	                  </div>
+	                  <div class="col-xs-9">
+	                    <div class="event-content">
+                          <img class="full-width" src="img/cphi-india2.jpg" alt="">
+	                     <!-- <h5 class="event-title"><a href="#">Commodi expedita perspici</a></h5>-->	                     
+	                      <p class="mb-0">Bombay Exhibition Centre, Bombay, India.<br>November 28th – 30th</p>
+	                    </div>
+	                  </div>
+	                </div>
+	              </div></dt> 
+                  
+                  <dt class="heading">
+                    <div class="event style-two">
+	                <div class="row">
+	                  <div class="col-xs-3">
+	                    <div class="event-thumb">
+	                      <ul class="event-date">
+	                        <li class="date">20</li>
+	                        <li class="month">Jun</li>
+	                      </ul>
+	                    </div>
+	                  </div>
+	                  <div class="col-xs-9">
+	                    <div class="event-content">
+	                      <img class="full-width" src="img/china.jpg" alt="">                   
+	                      <p class="mb-0">Shanghai New Int'l Expo Centre (SNIEC), Shanghai, China.<br>June 20th - 22nd, 2016</p>
+	                    </div>
+	                  </div>
+	                </div>
+	              </div></dt>
+                  
+                   </dl>
+	                
+	                <div>
+	                
+	               
+	                </div>
+                     
+	              </div>
+                  
+	            </div>
+              </div>
+              
+	        </div>
+		</div>
+	</section>
+
+<section class="call-to-action mb_30">
+    <div class="container">
+		<div class="container-fluid">
+			<div class="clearfix">
+				<div class="call-to-action-corner col-md-4" style="background-image: url(img/left-box-bg.jpg);">
+					<div class="single-call-to-action">
+						
+						<div class="content-box">
+							<h3>Manufacturing Facilities</h3>
+							<p style="line-height:21px; ">Herrlich Pharma Solutions State of the art production facilities are designed to fulfill with the requirements of customer as well as regulatory agencies. HPS has ability to manufacture a wide range of fine chemicals and Active Pharmaceutical ingredients in GMP facilities.</p>
+							<a href="manufacturing-facilities.php" class="thm-btn inverse">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="call-to-action-center col-md-4" style="background-image: url(img/center-box-bg2.jpg);">
+					<div class="single-call-to-action">
+						
+						<div class="content-box">
+							<h3>Global Presence</h3>
+							<p style="margin-bottom:51px; font-size:18px; font-weight:300; line-height:26px;">An Integrated Herrlich Pharma Solutions company working with our business partners over 5 countries </p>
+							<p style="margin-bottom:28px;"><a href="global-presence.php" class="thm-btn inverse">Read More</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4" style="padding:0px;">
+					<img src="img/right-box-bg2.jpg" height="276" class="img-responsive" /> 
+				</div>
+			</div>
+		</div>
+        </div>
+	</section>
+	
+    
+   	<footer class="footer sec-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="footer-widget about-widget">
+						<a href="index.php">
+							<img src="img/logo.png" alt="Herrlich Pharma Solutions"/>
+						</a>
+						<p class="title" style="margin-bottom:5px; font-size:16px;"><strong style="color:#fff;">Address</strong>
+						<ul class="contact">
+							<li><i class="fa fa-map-marker"></i> <span>Herrlich Pharma Solutions, Road No-5, ALEAP Industrial Estate,Kukatpally,Hyderabad-500090 Telangana, India</span></li>
+							
+						</ul>
+						<ul class="social">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="footer-widget latest-post">
+						<h3 class="title">Our Location Map</h3>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d436.0926556739525!2d78.39759540442778!3d17.53139887491927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8e10533d831f%3A0xd698dec87d9d9412!2sALEAP+INDUSTRIAL+ESTATE!5e0!3m2!1sen!2sin!4v1536731203151" style="border:1px solid #3a4751; background:#151a1e; padding:5px;" allowfullscreen="" height="270" frameborder="0" width="100%"></iframe>
+					</div>
+				</div>
+				<div class="col-md-4 latest-post col-sm-6">
+                     <div class="footer-widget quick-links">
+						<h3 class="title">Quick Links</h3>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="synthesiss.html">Products</a></li>
+							<li><a href="manufacturing-facilities.html">Manufacturing Facilities</a></li>
+                            <li><a href="enquiry.php">Enquiry Form</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+					
+				</div>
+		
+			</div>
+		</div>
+	</footer>
+
+	<section class="footer-bottom">
+		<div class="container text-center">
+			<p>© 2018   <a href="#">HKGN Software Solutions</a>. All Rights Reserved.</p>
+		</div>
+	</section>
+	
+	
+	<script src="https://ajax.googlesynthesiss.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#submit").click(function(){
+	
+	if($("#nme").val()==""){
+	alert("Please Enter your Name");
+	$("#nme").focus();
+	return false;
+	}
+
+	if($("#eml").val()==""){
+	alert("Please Enter Your Email");
+	$("#eml").focus();
+	return false;
+	}
+	
+	if($("#eml").val()!=""){	
+	var emlval=$("#eml").val();
+	//alert(emlval);
+	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	 if(!emailReg.test(emlval)){
+     alert("Please Check your Email ID.");
+	 $("#eml").focus();
+	 return false;
+	 }
+	 	}
+		
+	if($("#msg").val()==""){
+	alert("Please Enter Your Message.");
+		$("#msg").focus();
+	return false;
+	}
+	
+});
+});
+</script>
+
+	<!-- main jQuery -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- bx slider -->
+	<script src="js/jquery.bxslider.min.js"></script>
+	<!-- owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- validate -->
+	<script src="js/jquery-parallax.js"></script>
+	<!-- validate -->
+	<script src="js/validate.js"></script>
+	<!-- mixit up -->
+	<script src="js/jquery.mixitup.min.js"></script>
+	<!-- fancybox -->
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<!-- easing -->
+	<script src="js/jquery.easing.min.js"></script>
+	<!-- circle progress -->
+	<script src="js/circle-progress.js"></script>
+	<!-- appear js -->
+	<script src="js/jquery.appear.js"></script>
+	<!-- count to -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- gmap helper -->
+	<script src="http://maps.google.com/maps/synthesis/js?sensor=true"></script>
+	<!-- gmap main script -->
+	<script src="js/gmap.js"></script>
+
+	<!-- isotope script -->
+	<script src="js/isotope.pkgd.min.js"></script>
+	<!-- jQuery ui js -->
+	<script src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
+	
+	<!-- revolution scripts -->
+
+	<script src="revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+
+	<!-- thm custom script -->
+	<script src="js/custom.js"></script>
+
+
+</body>
+</html>

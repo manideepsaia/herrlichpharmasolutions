@@ -1,0 +1,8 @@
+#ticker { width:100%; height:283px; /*border:1px solid #aaaaaa;*/ overflow:auto; }
+
+#ticker dt { padding:0 10px 5px 10px;/* background-color:#FFF; */ /*border-bottom:1px solid #EDEDED;*/ position:relative; }
+
+#ticker dd { margin-left:0; padding:0 10px 10px 10px; border-bottom:1px solid #aaaaaa; background-color:#e5e5e5; border-left:1px solid #ffffff; position:relative; }
+
+#ticker dd.last { border-bottom:1px solid #ffffff; }
+#ticker div { margin-top:0; }
